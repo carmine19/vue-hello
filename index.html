@@ -38,6 +38,21 @@
             <img v-bind:src="img_druid"  alt="" v-bind:title="img_title" v-bind:width="img_width">
 
 
+            <div class="box">
+
+                <h1>Calcola i tuoi EDPI</h1>
+                <input type="number" v-bind:placeholder="place_dpi" v-model="dpi">
+                <p>{{dpi}}</p>
+                <input type="number" v-bind:placeholder="place_sens" v-model="sens">
+                <p>{{sens}}</p>
+
+                <div class="btn btn-primary" @click="cacl_edpi">Calcola edpi</div>
+
+                <p>{{edpi}}</p>
+
+            </div>
+
+
 
 
         </div>

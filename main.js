@@ -19,7 +19,11 @@ var app = new Vue({
         img_title : 'Druid wow class',
         img_width : 320 + 'px',
         colore_titolo : 'blu',
-
+        dpi : '',
+        sens : '',
+        place_dpi : 'inserisci i tuoi dpi',
+        place_sens : 'inserisci la tua sensibilità',
+        edpi : '',
 
     },
 
@@ -33,6 +37,13 @@ var app = new Vue({
                 this.colore_titolo = 'blu'
             }
         },
+
+        cacl_edpi() {
+
+            this.edpi = this.dpi * this.sens;
+
+            return this.edpi.toFixed(2)
+        }
 
     }
 })
